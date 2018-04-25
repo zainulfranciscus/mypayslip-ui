@@ -23,7 +23,8 @@ export function loadingTax(state = false, action) {
 export function items(state = [], action) {
     switch (action.type) {
         case FETCHING_TAX_IS_SUCCESSFUL:
-            return action.items;
+            const items = {...action.items};
+            return items;
 
         default:
             return state;

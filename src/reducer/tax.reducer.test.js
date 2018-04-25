@@ -27,7 +27,7 @@ describe("tax.reducer unit tests ", () => {
 
         const state = items(false, payload);
 
-        expect(state).toBe(payload.items);
+        expect(state.minIncome).toBe(payload.items.minIncome);
     });
 
     it("errorWhenGettingTax reducer should return boolean equal to hasErrored", () => {

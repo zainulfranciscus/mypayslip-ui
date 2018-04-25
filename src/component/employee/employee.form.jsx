@@ -68,7 +68,7 @@ export default class EmployeeForm extends Component {
     generatePayslip() {
         let validation = this.props.validation.validate();
         if (validation.isEmployeeDataValid()) {
-            this.props.generatePayslip(this.state.formValues);
+            this.props.generatePayslip({...this.state.formValues});
         }
     }
 
