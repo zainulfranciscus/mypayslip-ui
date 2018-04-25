@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Employee Form unit tests  employee form component should match the most up to date snapshot 1`] = `
+<div
+  id="employeeForm"
+>
+  <h1>
+    Employee Info
+  </h1>
+  <div
+    className="form-group row"
+  >
+    <div
+      className="col-12 col-md-4"
+    >
+      <input
+        className="is-invalid form-control"
+        id="firstName"
+        name="firstName"
+        onChange={[Function]}
+        placeholder="first name"
+        type="text"
+        value=""
+      />
+      <p
+        className="error-msg"
+        id="errorMessageforFirstName"
+      >
+        Please enter a first name. First name cannot be a number 
+      </p>
+    </div>
+    <div
+      className="col-12 col-md-4"
+    >
+      <input
+        className="is-invalid form-control"
+        id="lastName"
+        name="lastName"
+        onChange={[Function]}
+        placeholder="last name"
+        type="text"
+        value=""
+      />
+      <p
+        className="error-msg"
+        id="errorMessageforLastName"
+      >
+        Please enter a last name. Last name cannot be a number 
+      </p>
+    </div>
+  </div>
+  <div
+    className="form-group row"
+  >
+    <div
+      className="col-12 col-md-4"
+    >
+      <div
+        className="input-group"
+      >
+        <div
+          className="input-group-prepend"
+        >
+          <div
+            className="input-group-text"
+          >
+            $
+          </div>
+        </div>
+        <input
+          className="is-invalid form-control"
+          id="salary"
+          name="salary"
+          onChange={[Function]}
+          placeholder="Annual Salary"
+          type="text"
+          value=""
+        />
+        <div
+          className="input-group-prepend"
+        >
+          <div
+            className="input-group-text"
+          >
+            .00
+          </div>
+        </div>
+      </div>
+      <p
+        className="error-msg"
+        id="errorMessageForSalary"
+      >
+        Please enter a salary, which must be a round number 
+      </p>
+    </div>
+    <div
+      className="col-12 col-md-4"
+    >
+      <input
+        className="is-invalid form-control"
+        id="superRate"
+        name="superRate"
+        onChange={[Function]}
+        placeholder="Super Rate"
+        type="text"
+        value=""
+      />
+      <p
+        className="error-msg"
+        id="errorMessageForSuper"
+      >
+        Please enter a number for super. 
+      </p>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="input-group col-12 col-md-4"
+    />
+    <div
+      className="input-group col-12 col-md-4"
+    />
+  </div>
+  <div
+    className="row justify-content-end"
+  >
+    <div
+      className="input-group col-6 button-padding"
+    >
+      <button
+        className="btn btn-primary "
+        id="generatePayslipButton"
+        name="generatePayslipButton"
+        onChange={[Function]}
+        onClick={[Function]}
+        value={undefined}
+      >
+        Generate Payslip
+      </button>
+    </div>
+  </div>
+</div>
+`;

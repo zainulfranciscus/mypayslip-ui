@@ -1,0 +1,44 @@
+.grey-row {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    background-color: #eeeeee;
+}
+
+.input-group.button-padding{
+    padding-left:33px;
+}
+
+#Payslip_Container {
+	width:350px;
+}
+
+.pay-btn{
+	float:right;
+}
+
+.error-container{
+    border: 1px solid red;
+    background-color:rgba(194,24,7,0.2);
+    padding: 20px;
+    margin-top:20px;
+}
+.error-msg {
+	color:red;
+	font-size:0.75em;
+}
+
+.loading-component{
+    background-color:#9fcdff;
+    border:1px solid #062c33;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.payslip-saved {
+    background-color:rgba(113,221,138,0.2);
+    border:1px solid #1e7e34;
+    border-radius: 10px;
+    padding:10px;
+    margin-top:20px;
+    width:50%;
+}

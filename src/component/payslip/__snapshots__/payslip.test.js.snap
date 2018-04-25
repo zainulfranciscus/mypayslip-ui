@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Payslip component unit test payslip component should match the most up to date snapshot 1`] = `
+<div
+  id="Payslip_Container"
+>
+  <h1>
+    Payslip
+  </h1>
+  <p>
+    John Doe
+  </p>
+  <div
+    className="row grey-row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        id="Paydate_Label"
+      >
+        <strong>
+          Pay Date
+        </strong>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        id="Paydate_ID"
+      >
+        25 Apr 2018
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        id="PayFrequency_Label"
+      >
+        <strong>
+          Pay Frequency
+        </strong>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        id="PayFrequency_ID"
+      >
+        Monthly
+      </div>
+    </div>
+  </div>
+  <div
+    className="row grey-row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        id="AnnualIncome_Label"
+      >
+        <strong>
+          Annual Income
+        </strong>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        id="AnnualIncome_ID"
+      >
+        2500
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        id="GrossIncome_Label"
+      >
+        <strong>
+          Gross Income
+        </strong>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        id="GrossIncome_ID"
+      >
+        1500
+      </div>
+    </div>
+  </div>
+  <div
+    className="row grey-row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        id="IncomeTax_Label"
+      >
+        <strong>
+          Income Tax
+        </strong>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        id="IncomeTax_ID"
+      >
+        4500
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        id="NetIncome_Label"
+      >
+        <strong>
+          Net Income
+        </strong>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        id="NetIncome_ID"
+      >
+        3000
+      </div>
+    </div>
+  </div>
+  <div
+    className="row grey-row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        id="Super_Label"
+      >
+        <strong>
+          Super
+        </strong>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        id="Super_ID"
+      >
+        140
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-6"
+    >
+      <div
+        id="Pay_Label"
+      >
+        <strong>
+          Pay
+        </strong>
+      </div>
+    </div>
+    <div
+      className="col-6"
+    >
+      <div
+        id="Pay_ID"
+      >
+        750
+      </div>
+    </div>
+  </div>
+  <div
+    className="row justify-content-end"
+  >
+    <div
+      className="col-6"
+    >
+      <button
+        className="btn btn-primary pay-btn"
+        id="payButton"
+        onClick={[Function]}
+      >
+        Pay
+      </button>
+    </div>
+  </div>
+</div>
+`;

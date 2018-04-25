@@ -1,0 +1,41 @@
+{
+  "name": "mypayslip-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "enzyme-adapter-react-16": "^1.1.1",
+    "moment": "^2.22.1",
+    "npm": "^5.8.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test  --env=jsdom",
+    "eject": "react-scripts eject",
+    "e2eTest": "testcafe chrome ./end-to-end-testing/withWorkingStub.fixture.js",
+    "e2eTest:with400TaxResponse": "testcafe chrome ./end-to-end-testing/with400TaxResponse.fixture.js",
+    "e2eTest:with400PayslipResponse": "testcafe chrome ./end-to-end-testing/with400PayslipResponse.fixture.js",
+    "e2eTest:withNoTaxInformation": "testcafe chrome ./end-to-end-testing/withNoTaxInformation.fixture.js"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "dotenv": "^5.0.1",
+    "env-cmd": "^8.0.1",
+    "enzyme": "^3.3.0",
+    "fetch-mock": "^6.3.0",
+    "jest-environment-jsdom": "^22.4.3",
+    "jsdom": "11.8.0",
+    "jsdom-global": "3.0.2",
+    "react-app-env": "^1.2.0",
+    "react-test-renderer": "^16.3.2",
+    "redux-mock-store": "^1.5.1",
+    "testcafe": "^0.19.2",
+    "testcafe-react-selectors": "^2.0.0"
+  }
+}
