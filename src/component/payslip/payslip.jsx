@@ -70,7 +70,7 @@ export default class Payslip extends Component {
             return null;
         }
 
-        if(this.props.calculator.fullName() !== decoratedPayslipResponse.fullName()) {
+        if(this.props.calculator.fullName().toUpperCase() !== decoratedPayslipResponse.fullName().toUpperCase()) {
             return null;
         }
 
