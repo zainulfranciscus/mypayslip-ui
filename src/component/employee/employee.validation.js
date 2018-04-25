@@ -42,7 +42,7 @@ export default class EmployeeValidation {
     }
 
     validateSalary() {
-        return !this.isEmpty(this.salary) && this.isRoundNumber(this.salary);
+        return !this.isEmpty(this.salary) && this.isRoundNumber(this.salary) && parseFloat(this.salary) > 0;
     }
 
     validateFirstName() {
@@ -54,7 +54,7 @@ export default class EmployeeValidation {
     }
 
     validateSuper() {
-        return !this.isEmpty(this.superRate) && this.isNumeric(this.superRate);
+        return !this.isEmpty(this.superRate) && this.isNumeric(this.superRate) && parseFloat(this.superRate) > 0;
     }
 
     validate() {

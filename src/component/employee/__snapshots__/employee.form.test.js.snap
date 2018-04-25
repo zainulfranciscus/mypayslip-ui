@@ -90,7 +90,7 @@ exports[`Employee Form unit tests  employee form component should match the most
         className="error-msg"
         id="errorMessageForSalary"
       >
-        Please enter a salary, which must be a round number 
+        Please enter a salary, which must be a round number that must not be less than 0.
       </p>
     </div>
     <div
@@ -109,7 +109,7 @@ exports[`Employee Form unit tests  employee form component should match the most
         className="error-msg"
         id="errorMessageForSuper"
       >
-        Please enter a number for super. 
+        Please enter a number for super that must not be less than 0.
       </p>
     </div>
   </div>

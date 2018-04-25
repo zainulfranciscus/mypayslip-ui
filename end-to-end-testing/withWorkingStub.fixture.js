@@ -69,11 +69,24 @@ test('Enter a last name that are not alphabet will trigger a validation error' ,
 test('Enter a salary that is not a round number will trigger an error message' , async t => {
     await t.typeText(salaryID, '4500.12')
         .click('#generatePayslipButton')
-        .expect(Selector('#errorMessageForSalary').innerText).eql('Please enter a salary, which must be a round number')
+        .expect(Selector('#errorMessageForSalary').innerText).eql('Please enter a salary, which must be a round number that must not be less than 0.')
+});
+
+test('Enter a salary that is a negative number will trigger an error message' , async t => {
+    await t.typeText(salaryID, '-1000')
+        .click('#generatePayslipButton')
+        .expect(Selector('#errorMessageForSalary').innerText).eql('Please enter a salary, which must be a round number that must not be less than 0.')
 });
 
 test('Enter a super that is not a number will trigger an error message' , async t => {
     await t.typeText(superRateID, 'nine percent')
         .click('#generatePayslipButton')
-        .expect(Selector('#errorMessageForSuper').innerText).eql('Please enter a number for super.')
+        .expect(Selector('#errorMessageForSuper').innerText).eql('Please enter a number for super that must not be less than 0.')
 });
+
+test('Enter a super that is a negative number will trigger an error message' , async t => {
+    await t.typeText(superRateID, '-9')
+        .click('#generatePayslipButton')
+        .expect(Selector('#errorMessageForSuper').innerText).eql('Please enter a number for super that must not be less than 0.')
+});
+

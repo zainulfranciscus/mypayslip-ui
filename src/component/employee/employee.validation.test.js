@@ -24,6 +24,10 @@ describe("Employee Validation unit tests ",() => {
         expect(employeeValidation.withSalary("15000.756").validateSalary()).toBeFalsy();
     });
 
+    it("should return false when salary is negative", () => {
+        expect(employeeValidation.withSalary("-1").validateSalary()).toBeFalsy();
+    });
+
     it("should return false when first name is an empty string", () => {
         expect(employeeValidation.withFirstName("").validateFirstName()).toBeFalsy();
     });
@@ -63,6 +67,9 @@ describe("Employee Validation unit tests ",() => {
 
     it("should return true when super is a number with fractions", () => {
         expect(employeeValidation.withSuper("15000.756").validateSuper()).toBeTruthy();
+    });
+    it("should return false when super is negative", () => {
+        expect(employeeValidation.withSuper("-1").validateSuper()).toBeFalsy();
     });
 
     it("should return true when all empllyee data is valid", () => {

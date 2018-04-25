@@ -134,7 +134,7 @@ export default class EmployeeForm extends Component {
                             </div>
                              <p id="errorMessageForSalary" className={
                                 this.state.isSalaryValid ? "d-none" : "error-msg"
-                            }>Please enter a salary, which must be a round number </p>
+                            }>Please enter a salary, which must be a round number that must not be less than 0.</p>
                            
 
                         </div>
@@ -149,7 +149,7 @@ export default class EmployeeForm extends Component {
                                    }/>
                              <p id="errorMessageForSuper" className={
                                 this.state.isSuperValid ? "d-none" : "error-msg"
-                            }>Please enter a number for super. </p>
+                            }>Please enter a number for super that must not be less than 0.</p>
                         </div>
                     </div>
 
