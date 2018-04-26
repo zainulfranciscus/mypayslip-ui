@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import moment from "moment";
 import payslipDecorator from "../../data/payslip.decorator";
+import {amountFormatter} from "./payslip.calculator";
 
 const ID_FOR_PAYDATE_DIV = "Paydate_ID";
 const ID_FOR_PAYDATE_LABEL = "Paydate_Label";
@@ -39,7 +40,7 @@ const PAY_LABEL = "Pay";
 
 export const ID_FOR_PAYSLIP_CONTAINER = "Payslip_Container";
 
-export const DATE_FORMAT = 'DD MMM YYYY';
+export const DATE_FORMAT = 'DD MMMM YYYY';
 
 
 export default class Payslip extends Component {
@@ -125,7 +126,7 @@ export default class Payslip extends Component {
                         <div id={ID_FOR_ANNUAL_INCOME_LABEL}><strong>{ANNUAL_INCOME_LABEL}</strong></div>
                     </div>
                     <div className="col-6">
-                        <div id={ID_FOR_ANNUAL_INCOME}>{this.props.calculator.annualSalary()}</div>
+                        <div id={ID_FOR_ANNUAL_INCOME}>{amountFormatter(this.props.calculator.annualSalary())}</div>
                     </div>
                 </div>
 
@@ -134,7 +135,7 @@ export default class Payslip extends Component {
                         <div id={ID_FOR_GROSS_INCOME_LABEL}><strong>{GROSS_INCOME_LABEL}</strong></div>
                     </div>
                     <div className="col-6">
-                        <div id={ID_FOR_GROSS_INCOME}>{this.props.calculator.getGrossIncome()}</div>
+                        <div id={ID_FOR_GROSS_INCOME}>{amountFormatter(this.props.calculator.getGrossIncome())}</div>
                     </div>
                 </div>
 
@@ -143,7 +144,7 @@ export default class Payslip extends Component {
                         <div id={ID_FOR_INCOME_TAX_LABEL}><strong>{INCOME_TAX_LABEL}</strong></div>
                     </div>
                     <div className="col-6">
-                        <div id={ID_FOR_INCOME_TAX}>{this.props.calculator.getIncomeTax()}</div>
+                        <div id={ID_FOR_INCOME_TAX}>{amountFormatter(this.props.calculator.getIncomeTax())}</div>
                     </div>
                 </div>
 
@@ -152,7 +153,7 @@ export default class Payslip extends Component {
                         <div id={ID_FOR_NET_INCOME_LABEL}><strong>{NET_INCOME_LABEL}</strong></div>
                     </div>
                     <div className="col-6">
-                        <div id={ID_FOR_NET_INCOME}>{this.props.calculator.getNetIncome()}</div>
+                        <div id={ID_FOR_NET_INCOME}>{amountFormatter(this.props.calculator.getNetIncome())}</div>
                     </div>
                 </div>
 
@@ -161,7 +162,7 @@ export default class Payslip extends Component {
                         <div id={ID_FOR_SUPER_LABEL}><strong>{SUPER_LABEL}</strong></div>
                     </div>
                     <div className="col-6">
-                        <div id={ID_FOR_SUPER}>{this.props.calculator.getSuper()}</div>
+                        <div id={ID_FOR_SUPER}>{amountFormatter(this.props.calculator.getSuper())}</div>
                     </div>
                 </div>
 
@@ -170,7 +171,7 @@ export default class Payslip extends Component {
                         <div id={ID_FOR_PAY_LABEL}><strong>{PAY_LABEL}</strong></div>
                     </div>
                     <div className="col-6">
-                        <div id={ID_FOR_PAY}>{this.props.calculator.getPay()}</div>
+                        <div id={ID_FOR_PAY}>{amountFormatter(this.props.calculator.getPay())}</div>
                     </div>
                 </div>
 

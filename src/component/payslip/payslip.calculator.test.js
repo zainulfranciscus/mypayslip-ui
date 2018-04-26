@@ -1,11 +1,13 @@
 import PayslipCalculator, {
     NUMBER_OF_MONTHS_IN_A_YEAR,
-    divide
+    divide,
+    amountFormatter
 } from "./payslip.calculator";
 
 import {ID_OF_ANNUAL_SALARY_TEXT_FIELD, ID_OF_SUPER_RATE_TEXT_FIELD, ID_OF_FIRST_NAME_TEXT_FIELD,
     ID_OF_LAST_NAME_TEXT_FIELD} from '../employee/employee.form';
 import taxDecorator from '../../data/tax.decorator';
+
 
 const mockTaxJson = {
     "status": 200,
@@ -106,7 +108,20 @@ describe("unit tests for Payslip Calculator", () => {
         payslipCalc.setEmployee(employeeFormValues);
 
         expect(payslipCalc.fullName()).toBe(null + ' ' + null);
-    })
+    });
+
+    it("Given a five digit dollar amount, the amount should be formatted with a $ and two digit zero fraction with a comma after the first 2nd digit", () => {
+        expect(amountFormatter('60050')).toBe('$60,050.00');
+    });
+
+    it("Given a four digit dollar amount, the amount should be formatted with a $ and two digit zero fraction with a comma after the first 1st digit", () => {
+        expect(amountFormatter('5004')).toBe('$5,004.00');
+    });
+
+
+    it("Given a three digit dollar amount, the amount should be formatted with a $ and two digit zero fraction with no commas", () => {
+        expect(amountFormatter('922')).toBe('$922.00');
+    });
 
 
 });

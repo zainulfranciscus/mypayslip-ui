@@ -5,32 +5,33 @@ import {
     ID_OF_LAST_NAME_TEXT_FIELD
 } from '../employee/employee.form';
 import taxDecorator from '../../data/tax.decorator';
+import currencyFormatter from 'currency-formatter';
 
 export const NUMBER_OF_MONTHS_IN_A_YEAR = 12;
 
 export default class PayslipCalculator {
 
-    fullName(){
+    fullName() {
 
         let firstName = this.firstName();
         let lastName = this.lastName();
 
-        if(typeof firstName !== 'undefined' && firstName !== null){
+        if (typeof firstName !== 'undefined' && firstName !== null) {
             firstName = firstName.trim();
         }
 
-        if(typeof lastName !== 'undefined' && lastName !== null){
+        if (typeof lastName !== 'undefined' && lastName !== null) {
             lastName = lastName.trim();
         }
 
         return firstName + " " + lastName;
     }
 
-    firstName(){
+    firstName() {
         return this.employeeFormValues[ID_OF_FIRST_NAME_TEXT_FIELD];
     }
 
-    lastName(){
+    lastName() {
         return this.employeeFormValues[ID_OF_LAST_NAME_TEXT_FIELD];
     }
 
@@ -103,4 +104,8 @@ export function divide(aNumber) {
             return aNumber / divisor;
         }
     }
+}
+
+export function amountFormatter(amount) {
+    return currencyFormatter.format(amount, {code: 'AUD'});
 }

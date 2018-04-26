@@ -1,6 +1,7 @@
 import {Selector} from 'testcafe';
 import moment from "moment";
 import fillEmployeeForm,{firstNameID,lastNameID,salaryID,superRateID,salary} from "./common.form.entry";
+import currencyFormatter from 'currency-formatter';
 
 fixture `Test for Payslip using a stub for functional test`
     .page `http://localhost:3000/`;
@@ -16,14 +17,14 @@ test('Given an employee, a payslip with the right amount should be displayed ', 
         .expect(Selector('#errorMessageforLastName').length).eql(0)
         .expect(Selector('#errorMessageForSalary').length).eql(0)
         .expect(Selector('#errorMessageForSuper').length).eql(0)
-        .expect(Selector('#AnnualIncome_ID').innerText).eql(salary)
-        .expect(Selector('#GrossIncome_ID').innerText).eql('5004')
-        .expect(Selector('#IncomeTax_ID').innerText).eql('922')
-        .expect(Selector('#NetIncome_ID').innerText).eql('4082')
-        .expect(Selector('#Super_ID').innerText).eql('450')
-        .expect(Selector('#Pay_ID').innerText).eql('3632')
+        .expect(Selector('#AnnualIncome_ID').innerText).eql(amountFormatter(salary))
+        .expect(Selector('#GrossIncome_ID').innerText).eql(amountFormatter(5004))
+        .expect(Selector('#IncomeTax_ID').innerText).eql(amountFormatter(922))
+        .expect(Selector('#NetIncome_ID').innerText).eql(amountFormatter(4082))
+        .expect(Selector('#Super_ID').innerText).eql(amountFormatter(450))
+        .expect(Selector('#Pay_ID').innerText).eql(amountFormatter(3632))
         .expect(Selector('#PayFrequency_ID').innerText).eql("Monthly")
-        .expect(Selector('#Paydate_ID').innerText).eql( moment().format('DD MMM YYYY'))
+        .expect(Selector('#Paydate_ID').innerText).eql( moment().format('DD MMMM YYYY'))
 
 
 });
@@ -90,3 +91,6 @@ test('Enter a super that is a negative number will trigger an error message' , a
         .expect(Selector('#errorMessageForSuper').innerText).eql('Please enter a number for super that must not be less than 0.')
 });
 
+function amountFormatter(amount) {
+    return currencyFormatter.format(amount, {code: 'AUD'});
+}
